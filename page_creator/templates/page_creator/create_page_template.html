@@ -8,10 +8,16 @@
 
     <h1>Here you can create new page</h1>
     <h2>But you should use just ONE word</h2>
+
+    {% if user.is_authenticated %}
+
     <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+        {{ form.title }}
+
+        <button type="submit" class="save btn btn-default">Create Your Page</button>
     </form>
+
+    {% endif %}
 
 
 </body>

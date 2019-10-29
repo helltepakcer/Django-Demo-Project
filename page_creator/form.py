@@ -6,4 +6,4 @@ class PageCreatorForm(forms.ModelForm):
 
     class Meta:
         model = PageCreator
-        fields = ('title', 'text',)
+        fields = ('title', )
